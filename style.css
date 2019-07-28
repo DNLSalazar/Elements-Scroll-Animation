@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section h1 {
+    padding: 5px 10px;
+    margin: 15px;
+    background-color: white;
+    font-size: 3em;
+}
+
+/* [my-animation ~= "bounce"] {
+    animation-timing-function: cubic-bezier(.57,-0.68,.47,1.86);
+}
+
+@keyframes animations {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes rotateAnimations {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+} */
+
+
+body section:nth-child(1) {
+    background-color: blueviolet;
+}
+
+body section:nth-child(2) {
+    background-color: rgb(43, 122, 226);
+}
+
+body section:nth-child(3) {
+    background-color: rgb(226, 43, 150);
+}
+
+body section:nth-child(4) {
+    background-color: rgb(43, 226, 113);
+}
