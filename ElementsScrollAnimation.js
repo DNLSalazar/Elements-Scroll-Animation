@@ -9,10 +9,13 @@ window.addEventListener("load", function () {
 function animate (data) {
     if(data.type){
         data = this;
+        
         let i = parseInt(data.style.getPropertyValue("animation-iteration-count"));
+        if(isNaN(i))i = 1;
+
         i++;
         data.style.setProperty("animation-iteration-count", `${i}`);
-        console.log(data.style.getPropertyValue("animation-iteration-count"));
+        data.style.setProperty("animation-play-state", "running");
     } else {
 
         switch (data.getAttribute("my-animation")) {
@@ -93,8 +96,6 @@ function animate (data) {
             break;
     
         }
-        data.style.setProperty("animation-iteration-count", "1");
-        data.style.setProperty("animation-delay", "1s");
     }
 
     // console.log(data.style.getPropertyValue("animation-name"));
@@ -104,7 +105,12 @@ function animateScroll (e) {
     for(var i = 0; i < animable.length; i++) {
         if(animable[i].getBoundingClientRect().top < 600) {
             animable[i].addEventListener("click", animate);
+            animable[i].addEventListener("animationend", stopAnimation);
             animate(animable[i]);
         }
     }
+}
+
+function stopAnimation () {
+    this.style.setProperty("animation-play-state", "paused");
 }
