@@ -1,4 +1,4 @@
-# Elements Scroll Animation Library V 0.1.0
+# Elements Scroll Animation Library V 0.1.5
 
 This is the first version of the library made by myself, it still has
 some issues, I will still working in this to improve it.
