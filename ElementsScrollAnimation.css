@@ -1,15 +1,31 @@
 
 .myAnimatable {
+    --var1: 0px;
+    --var2: 0px;
     transform-style: preserve-3d;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    /* animation-iteration-count: 1; */
     opacity: 0;
 }
 
 [my-animation ~= "bounce"] {
     animation-timing-function: cubic-bezier(.57,-0.68,.47,1.86);
+}
+
+@keyframes animationReset {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes myTest {
@@ -24,6 +40,7 @@
 
 @keyframes animations {
     0% {
+        transform: translate(var(--var1), var(--var2));
         opacity: 0;
     }
 
@@ -35,6 +52,7 @@
 
 @keyframes rotateAnimations {
     0% {
+        transform: var(--var1);
         opacity: 1;
     }
 
