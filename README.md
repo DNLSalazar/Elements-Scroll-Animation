@@ -13,4 +13,3 @@ use them in your project using the classes and attributes.
 To start using the animations just add the files myScrollAnimations.css
 and myScrollAnimations.js to your project, link them and add the necessary data
 to your elements.
-

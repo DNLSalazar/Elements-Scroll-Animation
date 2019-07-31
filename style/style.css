@@ -17,7 +17,7 @@ section {
 }
 
 section h3 {
-    padding: 5px 10px;
+    padding: 15px 25px;
     margin: 15px;
     background-color: rgb(3, 4, 51);
     color: white;
@@ -25,15 +25,15 @@ section h3 {
 }
 
 .myAnimatable > .attrb {
-    color: rgb(208, 128, 255)
+    color: rgb(208, 128, 255);
 }
 
 .myAnimatable > .signs {
-    color: rgb(54, 174, 221)
+    color: rgb(54, 174, 221);
 }
 
 .myAnimatable > .text {
-    color: rgb(255, 166, 0)
+    color: rgb(255, 166, 0);
 }
 
 /* [my-animation ~= "bounce"] {

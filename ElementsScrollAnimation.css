@@ -1,5 +1,6 @@
 
 .myAnimatable {
+    border: 1px solid transparent;
     transform-style: preserve-3d;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -8,8 +9,22 @@
     opacity: 0;
 }
 
+.myAnimatable:hover {
+    animation-name: myTest;
+}
+
 [my-animation ~= "bounce"] {
     animation-timing-function: cubic-bezier(.57,-0.68,.47,1.86);
+}
+
+@keyframes myTest {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
 }
 
 @keyframes animations {
