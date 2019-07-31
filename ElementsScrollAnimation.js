@@ -8,8 +8,6 @@ window.addEventListener("load", function () {
 function animate () {
     for(var i = 0; i < animable.length; i++) {
         if(animable[i].getBoundingClientRect().top < 600) {
-
-            console.log(animable[i].style.getPropertyValue("border"));
             switch (animable[i].getAttribute("my-animation")) {
                 //Fade Simple Animations
                 case "fade left":
@@ -64,6 +62,18 @@ function animate () {
                 case "rotate y":
                     animable[i].style.setProperty("transform", "rotateY(90deg)");
                     animable[i].style.setProperty("animation-name", "rotateAnimations");
+                break;
+
+                //ClipShake Animations
+
+                case "clipShake center x":
+                    animable[i].style.setProperty("clip-path", "inset(40% 40% 40% 40%)");
+                    animable[i].style.setProperty("animation-name", "clipPathAnimationsX");
+                break;
+
+                case "clipShake center y":
+                    animable[i].style.setProperty("clip-path", "inset(40% 40% 40% 40%)");
+                    animable[i].style.setProperty("animation-name", "clipPathAnimationsY");
                 break;
 
             }            

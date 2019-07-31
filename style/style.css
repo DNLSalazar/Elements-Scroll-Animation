@@ -10,10 +10,30 @@ body {
 section {
     height: 100vh;
     width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.container {
+
+    height: auto;
+    min-width: 600px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 20px;
+}
+
+section > h1 {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    font-size: 2.5em;
+    color: white;
+    transform: translate(-50%);
 }
 
 section h3 {
@@ -77,4 +97,8 @@ body section:nth-child(3) {
 
 body section:nth-child(4) {
     background-color: rgb(43, 226, 113);
+}
+
+body section:nth-child(5) {
+    background-color: rgb(255, 208, 0);
 }
