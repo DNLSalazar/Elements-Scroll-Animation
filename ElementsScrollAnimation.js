@@ -22,64 +22,64 @@ function animate (data) {
             //Fade Simple Animations
     
             case "fade left":
-                data.style.setProperty("--var1", "-100px");
-                data.style.setProperty("--var2", "0px");
+                data.style.setProperty("--varESA1", "-100px");
+                data.style.setProperty("--varESA2", "0px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             case "fade right":
-                data.style.setProperty("--var1", "100px");
-                data.style.setProperty("--var2", "0px");
+                data.style.setProperty("--varESA1", "100px");
+                data.style.setProperty("--varESA2", "0px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             case "fade top":
-                data.style.setProperty("--var1", "0px");
-                data.style.setProperty("--var2", "-100px");
+                data.style.setProperty("--varESA1", "0px");
+                data.style.setProperty("--varESA2", "-100px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             case "fade bottom":
-                data.style.setProperty("--var1", "0px");
-                data.style.setProperty("--var2", "100px");
+                data.style.setProperty("--varESA1", "0px");
+                data.style.setProperty("--varESA2", "100px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             //Bounce Animations
     
             case "bounce left":
-                data.style.setProperty("--var1", "-250px");
-                data.style.setProperty("--var2", "0px");
+                data.style.setProperty("--varESA1", "-250px");
+                data.style.setProperty("--varESA2", "0px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             case "bounce right":
-                data.style.setProperty("--var1", "250px");
-                data.style.setProperty("--var2", "0px");
+                data.style.setProperty("--varESA1", "250px");
+                data.style.setProperty("--varESA2", "0px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             case "bounce top":
-                data.style.setProperty("--var1", "0px");
-                data.style.setProperty("--var2", "-250px");
+                data.style.setProperty("--varESA1", "0px");
+                data.style.setProperty("--varESA2", "-250px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             case "bounce bottom":
-                data.style.setProperty("--var1", "0px");
-                data.style.setProperty("--var2", "250px");
+                data.style.setProperty("--varESA1", "0px");
+                data.style.setProperty("--varESA2", "250px");
                 data.style.setProperty("animation-name", "animations");
             break;
     
             //Rotate Animations
     
             case "rotate x":
-                data.style.setProperty("--var1", "rotateX(90deg)");
+                data.style.setProperty("--varESA1", "rotateX(90deg)");
                 data.style.setProperty("animation-name", "rotateAnimations");
             break;
     
             case "rotate y":
-                data.style.setProperty("--var1", "rotateY(90deg)");
+                data.style.setProperty("--varESA1", "rotateY(90deg)");
                 data.style.setProperty("animation-name", "rotateAnimations");
             break;
     

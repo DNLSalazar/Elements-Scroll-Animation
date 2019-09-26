@@ -1,7 +1,7 @@
 
 .myAnimatable {
-    --var1: 0px;
-    --var2: 0px;
+    --varESA1: 0px;
+    --varESA2: 0px;
     transform-style: preserve-3d;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -40,7 +40,7 @@
 
 @keyframes animations {
     0% {
-        transform: translate(var(--var1), var(--var2));
+        transform: translate(var(--varESA1), var(--varESA2));
         opacity: 0;
     }
 
@@ -52,7 +52,7 @@
 
 @keyframes rotateAnimations {
     0% {
-        transform: var(--var1);
+        transform: var(--varESA1);
         opacity: 1;
     }
 
