@@ -2,6 +2,7 @@
 
 This is the first version of the library made by myself, it still has
 some issues, I will still working in this to improve it.
+You can try it [here](https://dnlsalazar.github.io/Elements-Scroll-Animation/)
 
 ## How to use it
 
