@@ -105,8 +105,6 @@ function animate (data) {
 function animateScroll (e) {
     const bodyHeight = body.getBoundingClientRect().height
     const scrolled = window.scrollY
-
-    console.log("Scrolled: " + scrolled + "    bodyHeight: " + bodyHeight)
     for(var i = 0; i < animable.length; i++) {
         if(animable[i].getBoundingClientRect().top < 600 || scrolled >= bodyHeight) {
             // console.log(animable[i].getBoundingClientRect())
