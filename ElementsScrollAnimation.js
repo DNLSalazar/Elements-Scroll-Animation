@@ -3,116 +3,116 @@ var animable = document.getElementsByClassName("myAnimatable");
 var body = document.getElementsByTagName("body")[0]
 
 window.addEventListener("load", function () {
-    var items = animable.length;
-    window.addEventListener("scroll", animateScroll);
+  var items = animable.length;
+  window.addEventListener("scroll", animateScroll);
 });
 
 function animate (data) {
-    if(data.type){
-        data = this;
-        
-        let i = parseInt(data.style.getPropertyValue("animation-iteration-count"));
-        if(isNaN(i))i = 1;
+  if(data.type){
+    data = this;
+    
+    let i = parseInt(data.style.getPropertyValue("animation-iteration-count"));
+    if(isNaN(i))i = 1;
 
-        i++;
-        data.style.setProperty("animation-iteration-count", `${i}`);
-        data.style.setProperty("animation-play-state", "running");
-    } else {
+    i++;
+    data.style.setProperty("animation-iteration-count", `${i}`);
+    data.style.setProperty("animation-play-state", "running");
+  } else {
+    console.log(data.dataset)
 
-        switch (data.getAttribute("my-animation")) {
-            //Fade Simple Animations
-    
-            case "fade left":
-                data.style.setProperty("--varESA1", "-100px");
-                data.style.setProperty("--varESA2", "0px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            case "fade right":
-                data.style.setProperty("--varESA1", "100px");
-                data.style.setProperty("--varESA2", "0px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            case "fade top":
-                data.style.setProperty("--varESA1", "0px");
-                data.style.setProperty("--varESA2", "-100px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            case "fade bottom":
-                data.style.setProperty("--varESA1", "0px");
-                data.style.setProperty("--varESA2", "100px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            //Bounce Animations
-    
-            case "bounce left":
-                data.style.setProperty("--varESA1", "-250px");
-                data.style.setProperty("--varESA2", "0px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            case "bounce right":
-                data.style.setProperty("--varESA1", "250px");
-                data.style.setProperty("--varESA2", "0px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            case "bounce top":
-                data.style.setProperty("--varESA1", "0px");
-                data.style.setProperty("--varESA2", "-250px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            case "bounce bottom":
-                data.style.setProperty("--varESA1", "0px");
-                data.style.setProperty("--varESA2", "250px");
-                data.style.setProperty("animation-name", "animations");
-            break;
-    
-            //Rotate Animations
-    
-            case "rotate x":
-                data.style.setProperty("--varESA1", "rotateX(90deg)");
-                data.style.setProperty("animation-name", "rotateAnimations");
-            break;
-    
-            case "rotate y":
-                data.style.setProperty("--varESA1", "rotateY(90deg)");
-                data.style.setProperty("animation-name", "rotateAnimations");
-            break;
-    
-            //ClipShake Animations
-    
-            case "clipShake center x":
-                data.style.setProperty("clip-path", "inset(40% 40% 40% 40%)");
-                data.style.setProperty("animation-name", "clipPathAnimationsX");
-            break;
-    
-            case "clipShake center y":
-                data.style.setProperty("clip-path", "inset(40% 40% 40% 40%)");
-                data.style.setProperty("animation-name", "clipPathAnimationsY");
-            break;
-    
-        }
+    switch (data.dataset.myanimation) {
+        //Fade Simple Animations
+
+      case "fade left":
+        data.style.setProperty("--varESA1", "-100px");
+        data.style.setProperty("--varESA2", "0px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      case "fade right":
+        data.style.setProperty("--varESA1", "100px");
+        data.style.setProperty("--varESA2", "0px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      case "fade top":
+        data.style.setProperty("--varESA1", "0px");
+        data.style.setProperty("--varESA2", "-100px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      case "fade bottom":
+        data.style.setProperty("--varESA1", "0px");
+        data.style.setProperty("--varESA2", "100px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      //Bounce Animations
+
+      case "bounce left":
+        data.style.setProperty("--varESA1", "-250px");
+        data.style.setProperty("--varESA2", "0px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      case "bounce right":
+        data.style.setProperty("--varESA1", "250px");
+        data.style.setProperty("--varESA2", "0px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      case "bounce top":
+        data.style.setProperty("--varESA1", "0px");
+        data.style.setProperty("--varESA2", "-250px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      case "bounce bottom":
+        data.style.setProperty("--varESA1", "0px");
+        data.style.setProperty("--varESA2", "250px");
+        data.style.setProperty("animation-name", "animations");
+      break;
+
+      //Rotate Animations
+
+      case "rotate x":
+        data.style.setProperty("--varESA1", "rotateX(90deg)");
+        data.style.setProperty("animation-name", "rotateAnimations");
+      break;
+
+      case "rotate y":
+        data.style.setProperty("--varESA1", "rotateY(90deg)");
+        data.style.setProperty("animation-name", "rotateAnimations");
+      break;
+
+      //ClipShake Animations
+
+      case "clipShake center x":
+        data.style.setProperty("clip-path", "inset(40% 40% 40% 40%)");
+        data.style.setProperty("animation-name", "clipPathAnimationsX");
+      break;
+
+      case "clipShake center y":
+        data.style.setProperty("clip-path", "inset(40% 40% 40% 40%)");
+        data.style.setProperty("animation-name", "clipPathAnimationsY");
+      break;
+
     }
-
-    // console.log(data.style.getPropertyValue("animation-name"));
+  }
+ // console.log(data.style.getPropertyValue("animation-name"));
 }
 
 function animateScroll (e) {
-    const bodyHeight = body.getBoundingClientRect().height
-    const scrolled = window.scrollY + window.innerHeight
-    for(var i = 0; i < animable.length; i++) {
-        if(animable[i].getBoundingClientRect().top < 600 || scrolled >= bodyHeight) {
-            // console.log(animable[i].getBoundingClientRect())
-            animable[i].addEventListener("click", animate);
-            animable[i].addEventListener("animationend", stopAnimation);
-            animate(animable[i]);
-        }
+  const bodyHeight = body.getBoundingClientRect().height
+  const scrolled = window.scrollY + window.innerHeight
+  for(var i = 0; i < animable.length; i++) {
+    if(animable[i].getBoundingClientRect().top < 600 || scrolled >= bodyHeight) {
+      // console.log(animable[i].getBoundingClientRect())
+      animable[i].addEventListener("click", animate);
+      animable[i].addEventListener("animationend", stopAnimation);
+      animate(animable[i]);
     }
+  }
 }
 
 function stopAnimation () {
